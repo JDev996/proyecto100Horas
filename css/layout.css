@@ -1,0 +1,36 @@
+.barra-superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    border-bottom: 1px solid #FFFFFF14;
+}
+
+.logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-texto);
+    text-decoration: none;
+}
+
+.logo-destacado { color: var(color-tarjetas);
+}
+
+.menu-principal {
+    display: flex;
+    gap: 32px;
+}
+
+.menu-link {
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.9rem;
+    color: var(--color-texto-secundario);
+    text-decoration: none;
+    padding-bottom: 4px;
+    transition: color 0.2s;
+}
