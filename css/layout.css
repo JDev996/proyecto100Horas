@@ -16,7 +16,9 @@
     text-decoration: none;
 }
 
-.logo-destacado { color: var(color-tarjetas);
+
+.logoJaj {
+    color: var(--color-botones-links);
 }
 
 .menu-principal {
@@ -34,3 +36,82 @@
     padding-bottom: 4px;
     transition: color 0.2s;
 }
+
+.menu-link:hover {
+    color: var(--color-texto);
+}
+
+
+.menu-link.paginaActual {
+    color: var(--color-botones-links);
+    border-bottom: 2px solid var(--color-botones-links);
+}
+
+.carrito {
+    color: var(--color-texto);
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.9rem;
+}
+
+
+.pie-pagina {
+    padding: 64px 40px 24px;
+    border-top: 1px solid #FFFFFF14;
+}
+
+
+.pie-columnas {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.pie-descripcion {
+    color: var(--color-texto-secundario);
+    margin: 16px 0;
+}
+
+.pie-contacto {
+    color: var(--color-texto-secundario);
+    margin-top: 8px;
+}
+
+.pie-titulo {
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.85rem;
+    color: var(--color-botones-links);
+    margin-bottom: 16px;
+}
+
+.pie-link {
+    display: block;
+    color: var(--color-texto-secundario);
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.2s;
+}
+
+.pie-link:hover {
+    color: var(--color-texto);
+}
+
+
+.pie-derechos {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 40px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid #FFFFFF14;
+    color: var(--color-texto-secundario);
+    font-size: 0.85rem;
+}
+
+

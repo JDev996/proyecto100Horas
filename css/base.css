@@ -16,8 +16,8 @@
 }
 
 body {
-   background-color: var(color-fondo);
-   color: var(color-texto);
-   font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background-color: var(--color-fondo);
+   color: var(--color-texto);
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    line-height: 1.6;
 }
