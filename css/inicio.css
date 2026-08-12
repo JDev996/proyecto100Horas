@@ -1,0 +1,25 @@
+.recibimiento,
+.top-motos,
+.distribuidores,
+.noticias,
+.nosotros {
+    display: block;
+    text-decoration: none;
+    color: var(--color-texto);
+    padding: 80px 40px;
+}
+
+.recibimiento {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.top-motos {
+    background-color: var(--color-tarjetas);
+}
+
+.noticias {
+    background-color: var(--color-tarjetas);
+}
