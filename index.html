@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&display=swap" rel="stylesheet"> 
     <title>JAJ Motos</title>
-    <link rel="stylesheet" href="css/inicio.css">
-    <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/inicio.css">
 </head>
 <body>
 
@@ -23,20 +24,60 @@
         </nav>
 
         <section class="recibimiento">
-            <h1>Rueda seguro. Rueda con estilo.</h1>
+
+            <div class="carrusel">
+                <img src="img/carrusel/moto1.jpg" alt="Moto 1">
+                <img src="img/carrusel/moto2.jpg" alt="Moto 2">
+                <img src="img/carrusel/moto3.jpg" alt="Moto 3">
+                <img src="img/carrusel/moto4.jpg" alt="Moto 4">
+                <img src="img/carrusel/moto5.jpg" alt="Moto 5">
+            </div>
+
+            <div class="recibimiento-contenido">
+                <span class="insignia">Tienda 100% online · Colombia</span>
+                <h1>Rueda seguro.<br>Rueda con estilo.</h1>
+                <p class="bajoTitulo">Motos, repuestos, accesorios y seguridad vial. Todo en un solo lugar, enviado a tu puerta.</p>
+                <a href="Productos.html" class="boton-productos">Explorar catálogo</a>
+            </div>
+
         </section>
 
-        <a href="#" class="top-motos">
+        <a href="topMotos.html" class="top-motos">
             <h2>Conoce nuestras opiniones y análisis de las mejores motos del momento</h2>
         </a>
 
         <section class="distribuidores">
             <h2>Nuestros distribuidores</h2>
+            <div class="distribuidores-grid">
+                <div class="tarjeta-distribuidor">
+                    <img src="img/imgInicio/distribuidoresInicio/akt.jpg" alt="AKT">
+                </div>
+                <div class="tarjeta-distribuidor">
+                    <img src="img/imgInicio/distribuidoresInicio/bajaj-logo-new.jpg" alt="Bajaj">
+                </div>
+                <div class="tarjeta-distribuidor">
+                    <img src="img/imgInicio/distribuidoresInicio/hero-moto-corp-logo-png_seeklogo-239428.png" alt="Hero">
+                </div>
+                <div class="tarjeta-distribuidor">
+                    <img src="img/imgInicio/distribuidoresInicio/honda-logo-honda-icon-free-free-vector.jpg" alt="Honda">
+                </div>
+                <div class="tarjeta-distribuidor">
+                    <img src="img/imgInicio/distribuidoresInicio/royal-enfield-logo-png_seeklogo-425859.png" alt="Royal Enfield">
+                </div>
+                <div class="tarjeta-distribuidor">
+                    <img src="img/imgInicio/distribuidoresInicio/susuki.jpg" alt="Suzuki">
+                </div>
+                <div class="tarjeta-distribuidor">
+                    <img src="img/imgInicio/distribuidoresInicio/tvs.jpg" alt="TVS">
+                </div>
+                <div class="tarjeta-distribuidor">
+                    <img src="img/imgInicio/distribuidoresInicio/yamaha.png" alt="Yamaha">
+                </div>
+            </div>
         </section>
 
         <section class="noticias">
             <h2>Noticias y novedades moteras</h2>
-        </section>
 
         <div class="pie-bloque">
             <h3 class="pie-titulo">Navegación</h3>
@@ -46,10 +87,47 @@
             <a href="distribuidores.html" class="pie-link">Distribuidores</a>
             <a href="js/nosotros.html" class="pie-link">Nosotros</a>
         </div>
+            <div class="noticias-grid">
+
+                <article class="tarjeta-noticia">
+                    <img src="img/imgInicio/noticias/APACHE-160-FI-DUO-TONO-PHONE.png" alt="Motos más vendidas">
+                    <div class="noticia-texto">
+                        <span class="noticia-fecha">10 AGO 2026</span>
+                        <h3>Las 5 motos más vendidas de Colombia en 2026</h3>
+                        <p>Análisis del mercado motero colombiano: qué modelos lideran las ventas y por qué.</p>
+                    </div>
+                </article>
+
+                <article class="tarjeta-noticia">
+                    <img src="img/imgInicio/noticias/shaft.jpg" alt="Cómo elegir el casco">
+                    <div class="noticia-texto">
+                        <span class="noticia-fecha">05 AGO 2026</span>
+                        <h3>Cómo elegir el casco correcto para tu moto</h3>
+                        <p>Certificaciones, tipos de casco y qué tener en cuenta antes de comprar.</p>
+                    </div>
+                </article>
+
+                <article class="tarjeta-noticia">
+                    <img src="img/imgInicio/noticias/lubricacion-moto.jpg" alt="Mantenimiento preventivo">
+                    <div class="noticia-texto">
+                        <span class="noticia-fecha">01 AGO 2026</span>
+                        <h3>Mantenimiento preventivo: checklist mensual</h3>
+                        <p>Revisá estos 8 puntos cada mes y mantené tu moto en óptimas condiciones.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <a href="#" class="nosotros">
+            <h2>Nosotros</h2>
+        </a>
+
     </main>
 
     <div id="footer"></div>
 
     <script src="js/componentes.js"></script>
+    <script src="js/inicio.js"></script>
 </body>
 </html>
