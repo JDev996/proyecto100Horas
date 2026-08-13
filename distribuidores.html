@@ -4,187 +4,179 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nuestros Aliados | Marcas de Motos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="distribuidores.css" />
 </head>
-<body>
+<body class="brand-page">
+    <header class="barra-superior">
+        <a href="index.html" class="logo">JAJ <span class="logoJaj">MOTOS</span></a>
 
-    <!-- ==========================================
-    ENCABEZADO
-    ========================================== -->
-    <header class="header">
-        <h1 class="header__title">NUESTROS ALIADOS</h1>
-        <p class="header__subtitle">
-            Dáramos las marcas más reconocidas del mercado colombiano.<br />
-            Encuentra la marca favorita.
-        </p>
-        <div class="header__separator">
-            <span class="header__separator-line"></span>
-            <span class="header__separator-icon">✦</span>
-            <span class="header__separator-line"></span>
-        </div>
+        <nav class="menu-principal" aria-label="Navegación principal">
+            <a href="index.html" class="menu-link">Inicio</a>
+            <a href="#" class="menu-link">Top Motos</a>
+            <a href="#" class="menu-link">Productos</a>
+            <a href="distribuidores.html" class="menu-link paginaActual">Distribuidores</a>
+            <a href="#" class="menu-link">Nosotros</a>
+            <a href="#" class="menu-link">Contacto</a>
+        </nav>
+
+        <a href="#" class="carrito" aria-label="Carrito de compras">🛒</a>
     </header>
 
-    <!-- ==========================================
-    GRID DE ALIADOS - MARCAS DE MOTOS
-    ========================================== -->
-    <main class="grid">
+    <main class="distribuidores-principal">
+        <div class="distribuidores-header">
+            <span class="eyebrow">Ver de distribuidores</span>
+            <h1>NUESTROS ALIADOS</h1>
+            <p>Distribuimos las marcas más reconocidas del mercado colombiano. Encuentra tu marca favorita.</p>
+        </div>
 
-        <!-- YAMAHA -->
-        <article class="card">
-            <h2 class="card__brand">YAMAHA</h2>
-            <p class="card__description">
-                Líder mundial en motocicletas. Tecnología japonesa de vanguardia, rendimiento y confiabilidad en cada modelo.
-            </p>
-            <div class="card__footer">
-                <span class="card__date">2023-01-01</span>
-                <a href="https://www.yamaha-motor.com.co" target="_blank" rel="noopener noreferrer" class="card__link">
-                    www.yamaha-motor.com.co
-                </a>
-            </div>
-        </article>
+        <section class="brand-grid" aria-label="Marcas asociadas">
+            <article class="brand-card brand-yamaha">
+                <div class="brand-card__header">
+                    <span class="brand-card__letter">Y</span>
+                    <h2>YAMAHA</h2>
+                </div>
+                <p> Líder global en motos deportivas, scooters y tecnología de vanguardia con un excelente rendimiento.</p>
+                <div class="brand-card__meta">
+                    <span>MODELO: YAMAHA</span>
+                    <span>RACING • CITY • TOURING</span>
+                </div>
+                <a href="https://www.yamaha-motor.com.co" target="_blank" rel="noopener noreferrer">Ver motos de Yamaha →</a>
+            </article>
 
-        <!-- SUZUKI -->
-        <article class="card">
-            <h2 class="card__brand">SUZUKI</h2>
-            <p class="card__description">
-                Innovación y calidad japonesa. Motos versátiles para ciudad y aventura, con excelente relación costo-beneficio.
-            </p>
-            <div class="card__footer">
-                <span class="card__date">2023-01-02</span>
-                <a href="https://www.suzuki.com.co" target="_blank" rel="noopener noreferrer" class="card__link">
-                    www.suzuki.com.co
-                </a>
-            </div>
-        </article>
+            <article class="brand-card brand-royal">
+                <div class="brand-card__header">
+                    <span class="brand-card__letter">R</span>
+                    <h2>ROYAL ENFIELD</h2>
+                </div>
+                <p>Estilo clásico, potencia y resistencia para quienes buscan una experiencia de conducción auténtica.</p>
+                <div class="brand-card__meta">
+                    <span>MODELO: ROYAL ENFIELD</span>
+                    <span>RETRO • PERFORMANCE • TOURING</span>
+                </div>
+                <a href="https://www.royalenfield.com.co" target="_blank" rel="noopener noreferrer">Ver motos de Royal Enfield →</a>
+            </article>
 
-        <!-- TVS -->
-        <article class="card">
-            <h2 class="card__brand">TVS</h2>
-            <p class="card__description">
-                Marca india con presencia global. Motos deportivas y urbanas con tecnología avanzada y diseño moderno.
-            </p>
-            <div class="card__footer">
-                <span class="card__date">2023-01-03</span>
-                <a href="https://www.tvsmotor.com.co" target="_blank" rel="noopener noreferrer" class="card__link">
-                    www.tvsmotor.com.co
-                </a>
-            </div>
-        </article>
+            <article class="brand-card brand-tvs">
+                <div class="brand-card__header">
+                    <span class="brand-card__letter">T</span>
+                    <h2>TVS</h2>
+                </div>
+                <p>Innovación india con motos urbanas, deportivas y confiables para el día a día en la ciudad.</p>
+                <div class="brand-card__meta">
+                    <span>MODELO: TVS</span>
+                    <span>URBANA • DEPORTIVA • EFICIENTE</span>
+                </div>
+                <a href="https://www.tvsmotor.com.co" target="_blank" rel="noopener noreferrer">Ver motos de TVS →</a>
+            </article>
 
-        <!-- BAJAJ -->
-        <article class="card">
-            <h2 class="card__brand">BAJAJ</h2>
-            <p class="card__description">
-                Líder del segmento económico en Latinoamérica. Empresas, desarrollando y bajo cuota de negocios.
-            </p>
-            <div class="card__footer">
-                <span class="card__date">2023-01-04</span>
-                <a href="https://www.bajaj.com.co" target="_blank" rel="noopener noreferrer" class="card__link">
-                    www.bajaj.com.co
-                </a>
-            </div>
-        </article>
+            <article class="brand-card brand-suzuki">
+                <div class="brand-card__header">
+                    <span class="brand-card__letter">S</span>
+                    <h2>SUZUKI</h2>
+                </div>
+                <p>Ingeniería japonesa con tecnología, economía y confianza para todo tipo de rider.</p>
+                <div class="brand-card__meta">
+                    <span>MODELO: SUZUKI</span>
+                    <span>URBANA • ALTA TECNOLOGÍA</span>
+                </div>
+                <a href="https://www.suzuki.com.co" target="_blank" rel="noopener noreferrer">Ver motos de Suzuki →</a>
+            </article>
 
-        <!-- AKT -->
-        <article class="card">
-            <h2 class="card__brand">AKT</h2>
-            <p class="card__description">
-                Marca colombiana con más de 15 años de experiencia. Motos económicas, duraderas y con repuestos disponibles.
-            </p>
-            <div class="card__footer">
-                <span class="card__date">2023-01-05</span>
-                <a href="https://www.aktmotos.com" target="_blank" rel="noopener noreferrer" class="card__link">
-                    www.aktmotos.com
-                </a>
-            </div>
-        </article>
+            <article class="brand-card brand-akt">
+                <div class="brand-card__header">
+                    <span class="brand-card__letter">A</span>
+                    <h2>AKT</h2>
+                </div>
+                <p>Marca colombiana con tradición y servicio, pensada para movilidad práctica y accesible.</p>
+                <div class="brand-card__meta">
+                    <span>MODELO: AKT</span>
+                    <span>ECONÓMICA • DURABLE • FIABLE</span>
+                </div>
+                <a href="https://www.aktmotos.com" target="_blank" rel="noopener noreferrer">Ver motos de AKT →</a>
+            </article>
 
-        <!-- ROYAL ENFIELD -->
-        <article class="card">
-            <h2 class="card__brand">ROYAL ENFIELD</h2>
-            <p class="card__description">
-                La marca de motos clásicas más antigua del mundo. Estilo retro, motores potentes y experiencia única de conducción.
-            </p>
-            <div class="card__footer">
-                <span class="card__date">2023-01-06</span>
-                <a href="https://www.royalenfield.com.co" target="_blank" rel="noopener noreferrer" class="card__link">
-                    www.royalenfield.com.co
-                </a>
-            </div>
-        </article>
+            <article class="brand-card brand-bajaj">
+                <div class="brand-card__header">
+                    <span class="brand-card__letter">B</span>
+                    <h2>BAJAJ</h2>
+                </div>
+                <p>Líder del segmento económico en Colombia con bajo costo de mantenimiento y gran valor.</p>
+                <div class="brand-card__meta">
+                    <span>MODELO: BAJAJ</span>
+                    <span>ECONÓMICA • ROBUSTA • VERSÁTIL</span>
+                </div>
+                <a href="https://www.bajaj.com.co" target="_blank" rel="noopener noreferrer">Ver motos de Bajaj →</a>
+            </article>
 
-        <!-- HERO -->
-        <article class="card">
-            <h2 class="card__brand">HERO</h2>
-            <p class="card__description">
-                El fabricante de motos más grande del mundo. Confiabilidad, eficiencia y tecnología para todos los bolsillos.
-            </p>
-            <div class="card__footer">
-                <span class="card__date">2023-01-07</span>
-                <a href="https://www.heromotocorp.com" target="_blank" rel="noopener noreferrer" class="card__link">
-                    www.heromotocorp.com
-                </a>
-            </div>
-        </article>
+            <article class="brand-card brand-honda">
+                <div class="brand-card__header">
+                    <span class="brand-card__letter">H</span>
+                    <h2>HONDA</h2>
+                </div>
+                <p>La marca más reconocida por su durabilidad, servicio técnico y confort en cada recorrido.</p>
+                <div class="brand-card__meta">
+                    <span>MODELO: HONDA</span>
+                    <span>CONFORT • CONFIANZA • CLASE</span>
+                </div>
+                <a href="https://www.honda.com.co" target="_blank" rel="    >Ver motos de Honda →</a>
+            </article>
 
-        <!-- HONDA -->
-        <article class="card">
-            <h2 class="card__brand">HONDA</h2>
-            <p class="card__description">
-                La marca más vendida del mundo. Confiabilidad, calidad y tecnología japonesa en cada motocicleta.
-            </p>
-            <div class="card__footer">
-                <span class="card__date">2023-01-08</span>
-                <a href="https://www.honda.com.co" target="_blank" rel="noopener noreferrer" class="card__link">
-                    www.honda.com.co
-                </a>
-            </div>
-        </article>
-
-        <!-- KAWASAKI -->
-        <article class="card">
-            <h2 class="card__brand">KAWASAKI</h2>
-            <p class="card__description">
-                Potencia y rendimiento extremo. Motos deportivas y de alta cilindrada con diseño agresivo y tecnología de punta.
-            </p>
-            <div class="card__footer">
-                <span class="card__date">2023-01-09</span>
-                <a href="https://www.kawasaki.com.co" target="_blank" rel="noopener noreferrer" class="card__link">
-                    www.kawasaki.com.co
-                </a>
-            </div>
-        </article>
-
-        <!-- KTM -->
-        <article class="card">
-            <h2 class="card__brand">KTM</h2>
-            <p class="card__description">
-                Motos de alto rendimiento para off-road y carretera. Diseño austriaco, ligereza y potencia excepcional.
-            </p>
-            <div class="card__footer">
-                <span class="card__date">2023-01-10</span>
-                <a href="https://www.ktm.com.co" target="_blank" rel="noopener noreferrer" class="card__link">
-                    www.ktm.com.co
-                </a>
-            </div>
-        </article>
-
-        <!-- DUCATI -->
-        <article class="card">
-            <h2 class="card__brand">DUCATI</h2>
-            <p class="card__description">
-                Exclusividad y diseño italiano. Motos de lujo con alto rendimiento, tecnología avanzada y estilo inconfundible.
-            </p>
-            <div class="card__footer">
-                <span class="card__date">2023-01-11</span>
-                <a href="https://www.ducati.com.co" target="_blank" rel="noopener noreferrer" class="card__link">
-                    www.ducati.com.co
-                </a>
-            </div>
-        </article>
-
+            <article class="brand-card brand-hero">
+                <div class="brand-card__header">
+                    <span class="brand-card__letter">H</span>
+                    <h2>HERO</h2>
+                </div>
+                <p>Fabricante global con motos eficientes para uso urbano, familiar y de alta demanda.</p>
+                <div class="brand-card__meta">
+                    <span>MODELO: HERO</span>
+                    <span>URBANA • EFICIENTE • ACCESIBLE</span>
+                </div>
+                <a href="https://www.heromotocorp.com" target="_blank" rel="noopener noreferrer">Ver motos de Hero →</a>
+            </article>
+        </section>
     </main>
 
+    <footer class="pie-pagina">
+        <div class="pie-columnas">
+            <div class="pie-marca">
+                <p class="logo">JAJ <span class="logoJaj">MOTOS</span></p>
+                <p class="pie-descripcion">Tu e-commerce de motos, repuestos y accesorios 100% online. Seguridad en la vía, precios justos.</p>
+                <p class="pie-contacto">jajmotos@rutasegura.com</p>
+                <p class="pie-contacto">+57 333 555 5555</p>
+            </div>
+
+            <div class="pie-bloque">
+                <h3 class="pie-titulo">Navegación</h3>
+                <a href="index.html" class="pie-link">Inicio</a>
+                <a href="#" class="pie-link">Top Motos</a>
+                <a href="#" class="pie-link">Productos</a>
+                <a href="distribuidores.html" class="pie-link">Distribuidores</a>
+            </div>
+
+            <div class="pie-bloque">
+                <h3 class="pie-titulo">Empresa</h3>
+                <a href="#" class="pie-link">Nosotros</a>
+                <a href="#" class="pie-link">Contacto</a>
+            </div>
+
+            <div class="pie-bloque">
+                <h3 class="pie-titulo">Redes sociales</h3>
+                <a href="#" class="pie-link">Instagram</a>
+                <a href="#" class="pie-link">Facebook</a>
+                <a href="#" class="pie-link">YouTube</a>
+                <a href="#" class="pie-link">TikTok</a>
+            </div>
+        </div>
+
+        <div class="pie-derechos">
+            <span>© 2026 JAJ Motos · rutasegura.com · Todos los derechos reservados</span>
+            <span>Tienda 100% online · Colombia</span>
+        </div>
+    </footer>
 </body>
 </html>
