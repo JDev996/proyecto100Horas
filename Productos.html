@@ -130,6 +130,27 @@
             <div class="productos-grid">
 
                 <article class="producto-card">
+                    <div class="producto-card__galeria-wrap">
+                        <div class="producto-card__galeria">
+                            <div class="producto-card__slide">
+                                <img src="img/productos/ACCESORIOS/AKRA11.png" alt="AKRAPOVIC Titan Carbon Racing - vista 1">
+                            </div>
+                            <div class="producto-card__slide">
+                                <img src="img/productos/ACCESORIOS/AKRA111.png" alt="AKRAPOVIC Titan Carbon Racing - vista 2">
+                            </div>
+                        </div>
+                        <button type="button" class="producto-card__flecha producto-card__flecha--prev" onclick="deslizarGaleria(this, -1)" aria-label="Imagen anterior">‹</button>
+                        <button type="button" class="producto-card__flecha producto-card__flecha--next" onclick="deslizarGaleria(this, 1)" aria-label="Imagen siguiente">›</button>
+                    </div>
+                    <div class="producto-card__body">
+                        <span class="producto-card__marca">AKRAPOVIC</span>
+                        <h3 class="producto-card__nombre">TITAN CARBON RACING</h3>
+                        <span class="producto-card__precio">$ 4.000.000</span>
+                        <button class="producto-card__boton">Agregar al carrito</button>
+                    </div>
+                </article>
+
+                <article class="producto-card">
                     <div class="producto-card__imagen">Imagen producto</div>
                     <div class="producto-card__body">
                         <span class="producto-card__marca">Marca</span>
@@ -203,6 +224,12 @@
             <span>Tienda 100% online · Colombia</span>
         </div>
     </footer>
-
+ <script>
+        function deslizarGaleria(boton, direccion) {
+            const galeria = boton.parentElement.querySelector('.producto-card__galeria');
+            const ancho = galeria.clientWidth;
+            galeria.scrollBy({ left: direccion * ancho, behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
