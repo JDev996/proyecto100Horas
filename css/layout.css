@@ -7,6 +7,7 @@
 }
 
 .logo {
+    /** Barlow Condensed lo sacamos de fonts.google.com :D */
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 900;
     font-size: 1.5rem;
