@@ -9,7 +9,7 @@
 .logo {
     /** Barlow Condensed lo sacamos de fonts.google.com :D */
     font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -29,6 +29,7 @@
 
 .menu-link {
     font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-size: 0.9rem;

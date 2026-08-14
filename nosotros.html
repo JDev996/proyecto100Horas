@@ -4,22 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>La Empresa - Moto E-commerce</title>
-    <link rel="stylesheet" href="../css/nosotros.css" />
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/nosotros.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
+    <div id="header"></div>
+
     <main>
-        <nav class="menu-principal" aria-label="Navegación principal">
-            <a href="../index.html" class="menu-link">Inicio</a>
-            <a href="#" class="menu-link">Top Motos</a>
-            <a href="#" class="menu-link">Productos</a>
-            <a href="../distribuidores.html" class="menu-link">Distribuidores</a>
-            <a href="nosotros.html" class="menu-link">Nosotros</a>
-            <a href="#" class="menu-link">Contacto</a>
-        </nav>
+        <section class="nosotros-visual" aria-label="Galería de imágenes de motos y accesorios">
+            <div class="fan-stack">
+                <img src="img/productos/MOTOS/BMW1.png" alt="Moto BMW" class="fan-image fan-1">
+                <img src="img/productos/MOTOS/Suzuki1.png" alt="Moto Suzuki" class="fan-image fan-2">
+                <img src="img/productos/MOTOS/yamaha1.png" alt="Moto Yamaha" class="fan-image fan-3">
+                <img src="img/productos/ACCESORIOS/AKRA11.png" alt="Accesorio AKRA" class="fan-image fan-4">
+                <img src="img/productos/ACCESORIOS/RIZOMA11.jpg" alt="Accesorio RIZOMA" class="fan-image fan-5">
+            </div>
+        </section>
 
         <div class="empresa-card">
             <header class="empresa-header">
@@ -103,45 +108,10 @@
             </section>
         </div>
 
-        <footer class="pie-pagina">
-            <div class="pie-columnas">
-                <div class="pie-marca">
-                    <p class="logo">JAJ <span class="logoJaj">MOTOS</span></p>
-                    <p class="pie-descripcion">
-                        Tu e-commerce de motos, repuestos y accesorios 100% online.
-                    </p>
-                    <p class="pie-contacto">jajmotos@rutasegura.com</p>
-                    <p class="pie-contacto">+57 333 555 5555</p>
-                </div>
-
-                <div class="pie-bloque">
-                    <h3 class="pie-titulo">Navegación</h3>
-                    <a href="../index.html" class="pie-link">Inicio</a>
-                    <a href="#" class="pie-link">Top Motos</a>
-                    <a href="#" class="pie-link">Productos</a>
-                    <a href="../distribuidores.html" class="pie-link">Distribuidores</a>
-                </div>
-
-                <div class="pie-bloque">
-                    <h3 class="pie-titulo">Empresa</h3>
-                    <a href="nosotros.html" class="pie-link">Nosotros</a>
-                    <a href="#" class="pie-link">Contacto</a>
-                </div>
-
-                <div class="pie-bloque">
-                    <h3 class="pie-titulo">Redes sociales</h3>
-                    <a href="#" class="pie-link">Instagram</a>
-                    <a href="#" class="pie-link">Facebook</a>
-                    <a href="#" class="pie-link">YouTube</a>
-                    <a href="#" class="pie-link">TikTok</a>
-                </div>
-            </div>
-
-            <div class="pie-derechos">
-                <span>© 2026 JAJ Motos · rutasegura.com · Todos los derechos reservados</span>
-                <span>Tienda 100% online · Colombia</span>
-            </div>
-        </footer>
     </main>
+
+    <div id="footer"></div>
+
+    <script src="js/componentes.js"></script>
 </body>
 </html>
