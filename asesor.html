@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/asesor.css">
+    <title>Asesor - JAJ Motos</title>
+</head>
+<body>
+    <div id="header"></div>
+
+         <main>
+
+        <section class="asesor-virtual">
+            <h1>Asesor virtual de motos</h1>
+            <p>Contanos qué buscás y te recomendamos la moto ideal.</p>
+
+            <div class="chat-asesor">
+                <div class="chat-mensajes" id="chatMensajes"></div>
+
+                <form class="chat-entrada-asesor" id="chatFormulario">
+                    <input type="text" id="chatInput" placeholder="Escribí tu mensaje...">
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer"></div>
+    <script src="js/componentes.js"></script>
+    <script src="js/asesor.js"></script>
+</body>
+</html>
