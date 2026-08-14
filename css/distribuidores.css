@@ -49,6 +49,8 @@
 }
 
 .brand-card {
+  position: relative;
+  overflow: hidden;
   background: linear-gradient(
     180deg,
     rgba(26, 26, 26, 0.96),
@@ -61,6 +63,35 @@
   display: flex;
   flex-direction: column;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.brand-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-position: center 24%;
+  background-size: 72% auto;
+  opacity: 0.12;
+  filter: grayscale(1) brightness(1.6);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+
+.brand-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.28);
+}
+
+.brand-card:hover::before {
+  opacity: 0.22;
+  transform: scale(1.06);
+}
+
+.brand-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .brand-card__header {
@@ -70,20 +101,6 @@
   margin-bottom: 14px;
   padding: 0 0 12px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.brand-card__letter {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  font-size: 1.1rem;
-  font-weight: 800;
-  background: var(--color-botones-links);
-  color: #fff;
-  flex-shrink: 0;
 }
 
 .brand-card h2 {
@@ -144,12 +161,20 @@
   );
 }
 
+.brand-yamaha::before {
+  background-image: url('../img/imgInicio/distribuidoresInicio/yamaha.png');
+}
+
 .brand-royal {
   background: linear-gradient(
     180deg,
     rgba(95, 22, 18, 0.95),
     rgba(18, 18, 18, 0.96)
   );
+}
+
+.brand-royal::before {
+  background-image: url('../img/imgInicio/distribuidoresInicio/royal-enfield-logo-png_seeklogo-425859.png');
 }
 
 .brand-tvs {
@@ -160,12 +185,20 @@
   );
 }
 
+.brand-tvs::before {
+  background-image: url('../img/imgInicio/distribuidoresInicio/tvs.jpg');
+}
+
 .brand-suzuki {
   background: linear-gradient(
     180deg,
     rgba(42, 60, 76, 0.95),
     rgba(18, 18, 18, 0.96)
   );
+}
+
+.brand-suzuki::before {
+  background-image: url('../img/imgInicio/distribuidoresInicio/susuki.jpg');
 }
 
 .brand-akt {
@@ -176,12 +209,20 @@
   );
 }
 
+.brand-akt::before {
+  background-image: url('../img/imgInicio/distribuidoresInicio/akt.jpg');
+}
+
 .brand-bajaj {
   background: linear-gradient(
     180deg,
     rgba(25, 56, 92, 0.95),
     rgba(18, 18, 18, 0.96)
   );
+}
+
+.brand-bajaj::before {
+  background-image: url('../img/imgInicio/distribuidoresInicio/bajaj-logo-new.jpg');
 }
 
 .brand-honda {
@@ -192,12 +233,24 @@
   );
 }
 
+.brand-honda::before {
+  background-image: url('../img/imgInicio/distribuidoresInicio/honda-logo-honda-icon-free-free-vector.jpg');
+  background-size: 58% auto;
+  background-position: center 18%;
+}
+
 .brand-hero {
   background: linear-gradient(
     180deg,
     rgba(20, 39, 82, 0.95),
     rgba(18, 18, 18, 0.96)
   );
+}
+
+.brand-hero::before {
+  background-image: url('../img/imgInicio/distribuidoresInicio/hero-moto-corp-logo-png_seeklogo-239428.png');
+  background-size: 52% auto;
+  background-position: center 16%;
 }
 
 @media (max-width: 1000px) {
