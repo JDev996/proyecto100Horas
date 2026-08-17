@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/productos.css">
+    <link rel="stylesheet" href="css/carrito.css">
 </head>
 
 <body>
@@ -41,7 +42,7 @@
             <h2 class="categoria__titulo">Motos</h2>
             <div class="productos-grid">
 
-                <article class="producto-card">
+                <article class="producto-card" data-id="moto-suzuki-gsxr-1000r" data-nombre="GSXR 1000R" data-marca="SUZUKI" data-precio="85000000" data-imagen="img/productos/MOTOS/Suzuki1.png">
                     <div class="producto-card__galeria-wrap">
                         <div class="producto-card__galeria">
                             <div class="producto-card__slide">
@@ -61,7 +62,7 @@
                         <h3 class="producto-card__nombre">GSXR 1000R</h3>
                         <span class="producto-card__precio">$ 85.000.000</span>
                         <div class="producto-card__acciones">
-                            <button class="producto-card__boton">Agregar al carrito</button>
+                            <button class="producto-card__boton" onclick="agregarAlCarrito(this)">Agregar al carrito</button>
                             <button type="button" class="producto-card__boton producto-card__boton--secundario"
                                 onclick="toggleEspecificaciones(this)">Ver especificaciones</button>
                         </div>
@@ -90,7 +91,7 @@
                     </div>
                 </article>
 
-                <article class="producto-card">
+                <article class="producto-card" data-id="moto-ducati-streetfighter-v4s" data-nombre="STREETFIGHTER V4S" data-marca="DUCATI" data-precio="125000000" data-imagen="img/productos/MOTOS/DUCA1.png">
                     <div class="producto-card__galeria-wrap">
                         <div class="producto-card__galeria">
                             <div class="producto-card__slide">
@@ -109,11 +110,11 @@
                         <span class="producto-card__marca">DUCATI</span>
                         <h3 class="producto-card__nombre">STREETFIGHTER V4S</h3>
                         <span class="producto-card__precio">$ 125.000.000</span>
-                        <button class="producto-card__boton">Agregar al carrito</button>
+                        <button class="producto-card__boton" onclick="agregarAlCarrito(this)">Agregar al carrito</button>
                     </div>
                 </article>
 
-                <article class="producto-card">
+                <article class="producto-card" data-id="moto-yamaha-mt09-sp" data-nombre="MT09 SP" data-marca="YAMAHA" data-precio="75000000" data-imagen="img/productos/MOTOS/yamaha1.png">
                     <div class="producto-card__galeria-wrap">
                         <div class="producto-card__galeria">
                             <div class="producto-card__slide">
@@ -132,11 +133,11 @@
                         <span class="producto-card__marca">YAMAHA</span>
                         <h3 class="producto-card__nombre">MT09 SP</h3>
                         <span class="producto-card__precio">$ 75.000.000</span>
-                        <button class="producto-card__boton">Agregar al carrito</button>
+                        <button class="producto-card__boton" onclick="agregarAlCarrito(this)">Agregar al carrito</button>
                     </div>
                 </article>
 
-                <article class="producto-card">
+                <article class="producto-card" data-id="moto-bmw-m1000-rr" data-nombre="M1000 RR" data-marca="BMW" data-precio="235000000" data-imagen="img/productos/MOTOS/BMW1.png">
                     <div class="producto-card__galeria-wrap">
                     <div class="producto-card__galeria">
                         <div class="producto-card__slide">
@@ -155,7 +156,7 @@
                         <span class="producto-card__marca">BMW</span>
                         <h3 class="producto-card__nombre">M1000 RR</h3>
                         <span class="producto-card__precio">$ 235.000.000</span>
-                        <button class="producto-card__boton">Agregar al carrito</button>
+                        <button class="producto-card__boton" onclick="agregarAlCarrito(this)">Agregar al carrito</button>
                     </div>
                 </article>
 
@@ -186,7 +187,7 @@
                         <span class="producto-card__marca">HONDA</span>
                         <h3 class="producto-card__nombre">FAROLA CBR</h3>
                         <span class="producto-card__precio">$ 2.300.000</span>
-                        <button class="producto-card__boton">Agregar al carrito</button>
+                        <button class="producto-card__boton" onclick="agregarAlCarrito(this)">Agregar al carrito</button>
                     </div>
                 </article>
 
@@ -209,7 +210,7 @@
                         <span class="producto-card__marca">YAMAHA</span>
                         <h3 class="producto-card__nombre">CARENAJE R6</h3>
                         <span class="producto-card__precio">$ 1.700.000</span>
-                        <button class="producto-card__boton">Agregar al carrito</button>
+                        <button class="producto-card__boton" onclick="agregarAlCarrito(this)">Agregar al carrito</button>
                     </div>
                 </article>
 
@@ -232,7 +233,7 @@
                         <span class="producto-card__marca">KAWAZAKI</span>
                         <h3 class="producto-card__nombre">FAROLA Z900</h3>
                         <span class="producto-card__precio">$ 2.900.000</span>
-                        <button class="producto-card__boton">Agregar al carrito</button>
+                        <button class="producto-card__boton" onclick="agregarAlCarrito(this)">Agregar al carrito</button>
                     </div>
                 </article>
 
@@ -255,7 +256,7 @@
                         <span class="producto-card__marca">YAMAHA</span>
                         <h3 class="producto-card__nombre">FAROLA MT09 V2</h3>
                         <span class="producto-card__precio">$ 2.000.000</span>
-                        <button class="producto-card__boton">Agregar al carrito</button>
+                        <button class="producto-card__boton" onclick="agregarAlCarrito(this)">Agregar al carrito</button>
                     </div>
                 </article>
 
@@ -288,7 +289,7 @@
                         <span class="producto-card__marca">AKRAPOVIC</span>
                         <h3 class="producto-card__nombre">TITAN CARBON RACING</h3>
                         <span class="producto-card__precio">$ 4.000.000</span>
-                        <button class="producto-card__boton">Agregar al carrito</button>
+                        <button class="producto-card__boton" onclick="agregarAlCarrito(this)">Agregar al carrito</button>
                     </div>
                 </article>
 
@@ -313,7 +314,7 @@
                         <span class="producto-card__marca">AKRAPOVIC</span>
                         <h3 class="producto-card__nombre">TITAN CARBON GP</h3>
                         <span class="producto-card__precio">$ 7.000.000</span>
-                        <button class="producto-card__boton">Agregar al carrito</button>
+                        <button class="producto-card__boton" onclick="agregarAlCarrito(this)">Agregar al carrito</button>
                     </div>
                 </article>
 
@@ -336,7 +337,7 @@
                         <span class="producto-card__marca">RIZOMA</span>
                         <h3 class="producto-card__nombre">STEALTH</h3>
                         <span class="producto-card__precio">$ 800.000</span>
-                        <button class="producto-card__boton">Agregar al carrito</button>
+                        <button class="producto-card__boton" onclick="agregarAlCarrito(this)">Agregar al carrito</button>
                     </div>
                 </article>
 
@@ -359,7 +360,7 @@
                         <span class="producto-card__marca">RIZOMA</span>
                         <h3 class="producto-card__nombre">FENDER ELIMINATOR</h3>
                         <span class="producto-card__precio">$ 1.000.000</span>
-                        <button class="producto-card__boton">Agregar al carrito</button>
+                        <button class="producto-card__boton" onclick="agregarAlCarrito(this)">Agregar al carrito</button>
                     </div>
                 </article>
 
@@ -370,6 +371,7 @@
 
     <div id="footer"></div>
     <script src="js/componentes.js"></script>
+    <script src="js/carrito.js"></script>
     <script>
         function deslizarGaleria(boton, direccion) {
             const galeria = boton.parentElement.querySelector('.producto-card__galeria');
