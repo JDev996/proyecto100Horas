@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos | JAJ Motos</title>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/productos.css">
 </head>
+
 <body>
 
     <div id="header"></div>
-
 
     <section class="header">
         <h1 class="titulo">NUESTROS PRODUCTOS</h1>
@@ -27,7 +29,6 @@
         </div>
     </section>
 
-
     <nav class="categorias-nav">
         <a href="#motos" class="categorias-nav__link">Motos</a>
         <a href="#repuestos" class="categorias-nav__link">Repuestos</a>
@@ -35,7 +36,6 @@
     </nav>
 
     <main>
-
 
         <section id="motos" class="categoria">
             <h2 class="categoria__titulo">Motos</h2>
@@ -51,14 +51,42 @@
                                 <img src="img/productos/MOTOS/Suzuki2.png" alt="GSXR 1000R - vista 2">
                             </div>
                         </div>
-                        <button type="button" class="producto-card__flecha producto-card__flecha--prev" onclick="deslizarGaleria(this, -1)" aria-label="Imagen anterior">‹</button>
-                        <button type="button" class="producto-card__flecha producto-card__flecha--next" onclick="deslizarGaleria(this, 1)" aria-label="Imagen siguiente">›</button>
+                        <button type="button" class="producto-card__flecha producto-card__flecha--prev"
+                            onclick="deslizarGaleria(this, -1)" aria-label="Imagen anterior">‹</button>
+                        <button type="button" class="producto-card__flecha producto-card__flecha--next"
+                            onclick="deslizarGaleria(this, 1)" aria-label="Imagen siguiente">›</button>
                     </div>
                     <div class="producto-card__body">
                         <span class="producto-card__marca">SUZUKI</span>
                         <h3 class="producto-card__nombre">GSXR 1000R</h3>
                         <span class="producto-card__precio">$ 85.000.000</span>
-                        <button class="producto-card__boton">Agregar al carrito</button>
+                        <div class="producto-card__acciones">
+                            <button class="producto-card__boton">Agregar al carrito</button>
+                            <button type="button" class="producto-card__boton producto-card__boton--secundario"
+                                onclick="toggleEspecificaciones(this)">Ver especificaciones</button>
+                        </div>
+                    </div>
+                    <div class="producto-card__especificaciones">
+                        <div class="especificacion">
+                            <span class="especificacion__icono">🔧</span>
+                            <span class="especificacion__valor">999cc</span>
+                            <span class="especificacion__etiqueta">Cilindraje</span>
+                        </div>
+                        <div class="especificacion">
+                            <span class="especificacion__icono">⚡</span>
+                            <span class="especificacion__valor">199 HP</span>
+                            <span class="especificacion__etiqueta">Potencia</span>
+                        </div>
+                        <div class="especificacion">
+                            <span class="especificacion__icono">⚖️</span>
+                            <span class="especificacion__valor">202 kg</span>
+                            <span class="especificacion__etiqueta">Peso</span>
+                        </div>
+                        <div class="especificacion">
+                            <span class="especificacion__icono">⛽</span>
+                            <span class="especificacion__valor">16 L</span>
+                            <span class="especificacion__etiqueta">Tanque</span>
+                        </div>
                     </div>
                 </article>
 
@@ -72,8 +100,10 @@
                                 <img src="img/productos/MOTOS/DUCA2.png" alt="STRET - vista 2">
                             </div>
                         </div>
-                        <button type="button" class="producto-card__flecha producto-card__flecha--prev" onclick="deslizarGaleria(this, -1)" aria-label="Imagen anterior">‹</button>
-                        <button type="button" class="producto-card__flecha producto-card__flecha--next" onclick="deslizarGaleria(this, 1)" aria-label="Imagen siguiente">›</button>
+                        <button type="button" class="producto-card__flecha producto-card__flecha--prev"
+                            onclick="deslizarGaleria(this, -1)" aria-label="Imagen anterior">‹</button>
+                        <button type="button" class="producto-card__flecha producto-card__flecha--next"
+                            onclick="deslizarGaleria(this, 1)" aria-label="Imagen siguiente">›</button>
                     </div>
                     <div class="producto-card__body">
                         <span class="producto-card__marca">DUCATI</span>
@@ -93,8 +123,10 @@
                                 <img src="img/productos/MOTOS/yamaha2.png" alt="MT09 - vista 2">
                             </div>
                         </div>
-                        <button type="button" class="producto-card__flecha producto-card__flecha--prev" onclick="deslizarGaleria(this, -1)" aria-label="Imagen anterior">‹</button>
-                        <button type="button" class="producto-card__flecha producto-card__flecha--next" onclick="deslizarGaleria(this, 1)" aria-label="Imagen siguiente">›</button>
+                        <button type="button" class="producto-card__flecha producto-card__flecha--prev"
+                            onclick="deslizarGaleria(this, -1)" aria-label="Imagen anterior">‹</button>
+                        <button type="button" class="producto-card__flecha producto-card__flecha--next"
+                            onclick="deslizarGaleria(this, 1)" aria-label="Imagen siguiente">›</button>
                     </div>
                     <div class="producto-card__body">
                         <span class="producto-card__marca">YAMAHA</span>
@@ -105,11 +137,24 @@
                 </article>
 
                 <article class="producto-card">
-                    <div class="producto-card__imagen">Imagen producto</div>
+                    <div class="producto-card__galeria-wrap">
+                    <div class="producto-card__galeria">
+                        <div class="producto-card__slide">
+                            <img src="img/productos/MOTOS/BMW1.png" alt="BMW - vista 1">
+                        </div>
+                        <div class="producto-card__slide">
+                            <img src="img/productos/MOTOS/BMW2.png" alt="BMW - vista 1">
+                        </div>
+                    </div>
+                        <button type="button" class="producto-card__flecha producto-card__flecha--prev"
+                            onclick="deslizarGaleria(this, -1)" aria-label="Imagen anterior">‹</button>
+                        <button type="button" class="producto-card__flecha producto-card__flecha--next"
+                            onclick="deslizarGaleria(this, 1)" aria-label="Imagen siguiente">›</button>
+                    </div>
                     <div class="producto-card__body">
-                        <span class="producto-card__marca">Marca</span>
-                        <h3 class="producto-card__nombre">Nombre de la moto</h3>
-                        <span class="producto-card__precio">$ 0.000.000</span>
+                        <span class="producto-card__marca">BMW</span>
+                        <h3 class="producto-card__nombre">M1000 RR</h3>
+                        <span class="producto-card__precio">$ 235.000.000</span>
                         <button class="producto-card__boton">Agregar al carrito</button>
                     </div>
                 </article>
@@ -122,7 +167,7 @@
             <h2 class="categoria__titulo">Repuestos</h2>
             <div class="productos-grid">
 
-               <article class="producto-card">
+                <article class="producto-card">
                     <div class="producto-card__galeria-wrap">
                         <div class="producto-card__galeria">
                             <div class="producto-card__slide">
@@ -132,8 +177,10 @@
                                 <img src="img/productos/REPUESTOS/CBR333.jpg" alt="FAROLA CBR333 - vista 2">
                             </div>
                         </div>
-                        <button type="button" class="producto-card__flecha producto-card__flecha--prev" onclick="deslizarGaleria(this, -1)" aria-label="Imagen anterior">‹</button>
-                        <button type="button" class="producto-card__flecha producto-card__flecha--next" onclick="deslizarGaleria(this, 1)" aria-label="Imagen siguiente">›</button>
+                        <button type="button" class="producto-card__flecha producto-card__flecha--prev"
+                            onclick="deslizarGaleria(this, -1)" aria-label="Imagen anterior">‹</button>
+                        <button type="button" class="producto-card__flecha producto-card__flecha--next"
+                            onclick="deslizarGaleria(this, 1)" aria-label="Imagen siguiente">›</button>
                     </div>
                     <div class="producto-card__body">
                         <span class="producto-card__marca">HONDA</span>
@@ -153,8 +200,10 @@
                                 <img src="img/productos/REPUESTOS/R6333.jpg" alt="CARENAJE R6333 - vista 2">
                             </div>
                         </div>
-                        <button type="button" class="producto-card__flecha producto-card__flecha--prev" onclick="deslizarGaleria(this, -1)" aria-label="Imagen anterior">‹</button>
-                        <button type="button" class="producto-card__flecha producto-card__flecha--next" onclick="deslizarGaleria(this, 1)" aria-label="Imagen siguiente">›</button>
+                        <button type="button" class="producto-card__flecha producto-card__flecha--prev"
+                            onclick="deslizarGaleria(this, -1)" aria-label="Imagen anterior">‹</button>
+                        <button type="button" class="producto-card__flecha producto-card__flecha--next"
+                            onclick="deslizarGaleria(this, 1)" aria-label="Imagen siguiente">›</button>
                     </div>
                     <div class="producto-card__body">
                         <span class="producto-card__marca">YAMAHA</span>
@@ -174,8 +223,10 @@
                                 <img src="img/productos/REPUESTOS/Z900222.jpg" alt="FAROLA Z900222 - vista 2">
                             </div>
                         </div>
-                        <button type="button" class="producto-card__flecha producto-card__flecha--prev" onclick="deslizarGaleria(this, -1)" aria-label="Imagen anterior">‹</button>
-                        <button type="button" class="producto-card__flecha producto-card__flecha--next" onclick="deslizarGaleria(this, 1)" aria-label="Imagen siguiente">›</button>
+                        <button type="button" class="producto-card__flecha producto-card__flecha--prev"
+                            onclick="deslizarGaleria(this, -1)" aria-label="Imagen anterior">‹</button>
+                        <button type="button" class="producto-card__flecha producto-card__flecha--next"
+                            onclick="deslizarGaleria(this, 1)" aria-label="Imagen siguiente">›</button>
                     </div>
                     <div class="producto-card__body">
                         <span class="producto-card__marca">KAWAZAKI</span>
@@ -195,8 +246,10 @@
                                 <img src="img/productos/REPUESTOS/MT09111.jpg" alt="FAROLA MT0911 - vista 2">
                             </div>
                         </div>
-                        <button type="button" class="producto-card__flecha producto-card__flecha--prev" onclick="deslizarGaleria(this, -1)" aria-label="Imagen anterior">‹</button>
-                        <button type="button" class="producto-card__flecha producto-card__flecha--next" onclick="deslizarGaleria(this, 1)" aria-label="Imagen siguiente">›</button>
+                        <button type="button" class="producto-card__flecha producto-card__flecha--prev"
+                            onclick="deslizarGaleria(this, -1)" aria-label="Imagen anterior">‹</button>
+                        <button type="button" class="producto-card__flecha producto-card__flecha--next"
+                            onclick="deslizarGaleria(this, 1)" aria-label="Imagen siguiente">›</button>
                     </div>
                     <div class="producto-card__body">
                         <span class="producto-card__marca">YAMAHA</span>
@@ -218,14 +271,18 @@
                     <div class="producto-card__galeria-wrap">
                         <div class="producto-card__galeria">
                             <div class="producto-card__slide">
-                                <img src="img/productos/ACCESORIOS/AKRA11.png" alt="AKRAPOVIC Titan Carbon Racing - vista 1">
+                                <img src="img/productos/ACCESORIOS/AKRA11.png"
+                                    alt="AKRAPOVIC Titan Carbon Racing - vista 1">
                             </div>
                             <div class="producto-card__slide">
-                                <img src="img/productos/ACCESORIOS/AKRA111.png" alt="AKRAPOVIC Titan Carbon Racing - vista 2">
+                                <img src="img/productos/ACCESORIOS/AKRA111.png"
+                                    alt="AKRAPOVIC Titan Carbon Racing - vista 2">
                             </div>
                         </div>
-                        <button type="button" class="producto-card__flecha producto-card__flecha--prev" onclick="deslizarGaleria(this, -1)" aria-label="Imagen anterior">‹</button>
-                        <button type="button" class="producto-card__flecha producto-card__flecha--next" onclick="deslizarGaleria(this, 1)" aria-label="Imagen siguiente">›</button>
+                        <button type="button" class="producto-card__flecha producto-card__flecha--prev"
+                            onclick="deslizarGaleria(this, -1)" aria-label="Imagen anterior">‹</button>
+                        <button type="button" class="producto-card__flecha producto-card__flecha--next"
+                            onclick="deslizarGaleria(this, 1)" aria-label="Imagen siguiente">›</button>
                     </div>
                     <div class="producto-card__body">
                         <span class="producto-card__marca">AKRAPOVIC</span>
@@ -236,17 +293,21 @@
                 </article>
 
                 <article class="producto-card">
-                  <div class="producto-card__galeria-wrap">
+                    <div class="producto-card__galeria-wrap">
                         <div class="producto-card__galeria">
                             <div class="producto-card__slide">
-                                <img src="img/productos/ACCESORIOS/AKRA22.png" alt="AKRAPOVIC Titan Carbon GP - vista 1">
+                                <img src="img/productos/ACCESORIOS/AKRA22.png"
+                                    alt="AKRAPOVIC Titan Carbon GP - vista 1">
                             </div>
                             <div class="producto-card__slide">
-                                <img src="img/productos/ACCESORIOS/AKRA222.png" alt="AKRAPOVIC Titan Carbon GP - vista 2">
+                                <img src="img/productos/ACCESORIOS/AKRA222.png"
+                                    alt="AKRAPOVIC Titan Carbon GP - vista 2">
                             </div>
                         </div>
-                        <button type="button" class="producto-card__flecha producto-card__flecha--prev" onclick="deslizarGaleria(this, -1)" aria-label="Imagen anterior">‹</button>
-                        <button type="button" class="producto-card__flecha producto-card__flecha--next" onclick="deslizarGaleria(this, 1)" aria-label="Imagen siguiente">›</button>
+                        <button type="button" class="producto-card__flecha producto-card__flecha--prev"
+                            onclick="deslizarGaleria(this, -1)" aria-label="Imagen anterior">‹</button>
+                        <button type="button" class="producto-card__flecha producto-card__flecha--next"
+                            onclick="deslizarGaleria(this, 1)" aria-label="Imagen siguiente">›</button>
                     </div>
                     <div class="producto-card__body">
                         <span class="producto-card__marca">AKRAPOVIC</span>
@@ -257,7 +318,7 @@
                 </article>
 
                 <article class="producto-card">
-                   <div class="producto-card__galeria-wrap">
+                    <div class="producto-card__galeria-wrap">
                         <div class="producto-card__galeria">
                             <div class="producto-card__slide">
                                 <img src="img/productos/ACCESORIOS/RIZOMA11.jpg" alt="RIZOMA stealth - vista 1">
@@ -266,8 +327,10 @@
                                 <img src="img/productos/ACCESORIOS/RIZOMA111.jpg" alt="RIZOMA stealth - vista 2">
                             </div>
                         </div>
-                        <button type="button" class="producto-card__flecha producto-card__flecha--prev" onclick="deslizarGaleria(this, -1)" aria-label="Imagen anterior">‹</button>
-                        <button type="button" class="producto-card__flecha producto-card__flecha--next" onclick="deslizarGaleria(this, 1)" aria-label="Imagen siguiente">›</button>
+                        <button type="button" class="producto-card__flecha producto-card__flecha--prev"
+                            onclick="deslizarGaleria(this, -1)" aria-label="Imagen anterior">‹</button>
+                        <button type="button" class="producto-card__flecha producto-card__flecha--next"
+                            onclick="deslizarGaleria(this, 1)" aria-label="Imagen siguiente">›</button>
                     </div>
                     <div class="producto-card__body">
                         <span class="producto-card__marca">RIZOMA</span>
@@ -278,7 +341,7 @@
                 </article>
 
                 <article class="producto-card">
-                   <div class="producto-card__galeria-wrap">
+                    <div class="producto-card__galeria-wrap">
                         <div class="producto-card__galeria">
                             <div class="producto-card__slide">
                                 <img src="img/productos/ACCESORIOS/RIZOMA22.jpg" alt="RIZOMA FENDER - vista 1">
@@ -287,8 +350,10 @@
                                 <img src="img/productos/ACCESORIOS/RIZOMA222.jpg" alt="RIZOMA FENDER - vista 2">
                             </div>
                         </div>
-                        <button type="button" class="producto-card__flecha producto-card__flecha--prev" onclick="deslizarGaleria(this, -1)" aria-label="Imagen anterior">‹</button>
-                        <button type="button" class="producto-card__flecha producto-card__flecha--next" onclick="deslizarGaleria(this, 1)" aria-label="Imagen siguiente">›</button>
+                        <button type="button" class="producto-card__flecha producto-card__flecha--prev"
+                            onclick="deslizarGaleria(this, -1)" aria-label="Imagen anterior">‹</button>
+                        <button type="button" class="producto-card__flecha producto-card__flecha--next"
+                            onclick="deslizarGaleria(this, 1)" aria-label="Imagen siguiente">›</button>
                     </div>
                     <div class="producto-card__body">
                         <span class="producto-card__marca">RIZOMA</span>
@@ -305,12 +370,18 @@
 
     <div id="footer"></div>
     <script src="js/componentes.js"></script>
- <script>
+    <script>
         function deslizarGaleria(boton, direccion) {
             const galeria = boton.parentElement.querySelector('.producto-card__galeria');
             const ancho = galeria.clientWidth;
             galeria.scrollBy({ left: direccion * ancho, behavior: 'smooth' });
         }
+        function toggleEspecificaciones(boton) {
+            const tarjeta = boton.closest('.producto-card');
+            const expandida = tarjeta.classList.toggle('producto-card--expandida');
+            boton.textContent = expandida ? 'Ocultar especificaciones' : 'Ver especificaciones';
+        }
     </script>
 </body>
+
 </html>
