@@ -6,16 +6,11 @@ agregarMensaje("¡Hola! Contame qué buscás pues!: una moto económica, de ciud
 
 formulario.addEventListener("submit", (evento) => {
     evento.preventDefault();
-
     const texto = input.value.trim();
     if (texto === "") {
         return;
     }
-
-    agregarMensaje(texto, "motero");
-    const respuesta = obtenerRespuesta(texto);
-    agregarMensaje(respuesta, "bot");
-
+    enviarMensaje(texto);
     input.value = "";
 });
 
@@ -24,7 +19,22 @@ function agregarMensaje(texto, autor) {
     mensaje.classList.add("mensaje", autor);
     mensaje.innerText = texto;
     mensajes.appendChild(mensaje);
+    mensajes.scrollTop = mensajes.scrollHeight;
 }
+
+function enviarMensaje(texto) {
+    agregarMensaje(texto, "motero");
+    setTimeout(() => {
+        const respuesta = obtenerRespuesta(texto);
+        agregarMensaje(respuesta, "bot");
+    }, 600);
+}
+
+document.querySelectorAll(".respuestaRapida").forEach((boton) => {
+    boton.addEventListener("click", () => {
+        enviarMensaje(boton.innerText);
+    });
+});
 
 function obtenerRespuesta(texto) {
     const mensaje = texto.toLowerCase();
