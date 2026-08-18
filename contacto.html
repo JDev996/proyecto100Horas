@@ -72,27 +72,28 @@
                 </div>
             </div>
 
-            <div class="contacto-form">
+            <form class="contacto-form" novalidate>
                 <div>
                     <div class="form-label">Envíanos un mensaje</div>
-                    <input class="campo" type="text" placeholder="Tu nombre" />
+                    <input class="campo" type="text" name="nombre" placeholder="Tu nombre" />
                 </div>
 
                 <div>
-                    <input class="campo" type="email" placeholder="Tu correo electrónico" />
+                    <input class="campo" type="email" name="email" placeholder="Tu correo electrónico" />
                 </div>
 
                 <div>
-                    <textarea class="campo campo-area" placeholder="Escríbenos tu consulta..."></textarea>
+                    <textarea class="campo campo-area" name="mensaje" placeholder="Escríbenos tu consulta..."></textarea>
                 </div>
 
-                <button class="btn-enviar" type="button">Enviar mensaje →</button>
-            </div>
+                <button class="btn-enviar" type="submit">Enviar mensaje →</button>
+            </form>
         </section>
     </main>
 
     <div id="footer"></div>
 
     <script src="js/componentes.js"></script>
+    <script src="js/contacto.js"></script>
 </body>
 </html>
