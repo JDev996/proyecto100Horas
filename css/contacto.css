@@ -240,6 +240,29 @@ body {
     transition: background 0.2s ease, transform 0.2s ease;
 }
 
+.contacto-form__estado {
+    display: none;
+    margin: 0;
+    padding: 12px 14px;
+    border-radius: 6px;
+    font-size: 0.96rem;
+    line-height: 1.4;
+}
+
+.contacto-form__estado.success {
+    display: block;
+    background: rgba(46, 204, 113, 0.1);
+    border: 1px solid rgba(46, 204, 113, 0.4);
+    color: #c8f9d5;
+}
+
+.contacto-form__estado.error {
+    display: block;
+    background: rgba(255, 87, 87, 0.08);
+    border: 1px solid rgba(255, 87, 87, 0.45);
+    color: #ffb3b3;
+}
+
 .btn-enviar:hover {
     background: var(--color-hover);
     transform: translateY(-1px);
