@@ -88,3 +88,36 @@
 .chat-entrada-asesor button:hover {
     background-color: var(--color-hover);
 }
+
+.mini-titulo {
+    display: inline-block;
+    color: var(--color-botones-links);
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.respuestas-rapidas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.respuestaRapida {
+    background-color: transparent;
+    color: var(--color-texto-secundario);
+    border: 1px solid #FFFFFF22;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.respuestaRapida:hover {
+    color: var(--color-texto);
+    border-color: var(--color-botones-links);
+}

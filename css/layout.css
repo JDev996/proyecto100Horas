@@ -104,6 +104,9 @@
     color: var(--color-texto);
 }
 
+.pie-link:hover {
+    color: var(--color-botones-links);
+}
 
 .pie-derechos {
     display: flex;
@@ -116,4 +119,7 @@
     font-size: 0.85rem;
 }
 
-
+.logo img {
+    height: 70px;
+    display: block;
+}
