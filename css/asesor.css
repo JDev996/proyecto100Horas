@@ -1,0 +1,90 @@
+.asesor-virtual {
+    min-height: 80vh;
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.asesor-virtual h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    text-transform: uppercase;
+}
+
+.asesor-virtual p {
+    color: var(--color-texto-secundario);
+    margin-top: 12px;
+    margin-bottom: 40px;
+}
+
+.chat-asesor {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--color-tarjetas);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.chat-mensajes {
+    height: 360px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.mensaje {
+    max-width: 75%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    line-height: 1.5;
+}
+
+.mensaje.bot {
+    align-self: flex-start;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+.mensaje.motero {
+    align-self: flex-end;
+    background-color: var(--color-botones-links);
+    color: var(--color-texto);
+}
+
+.chat-entrada-asesor {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-entrada-asesor input {
+    flex: 1;
+    background-color: var(--color-fondo);
+    border: 1px solid #FFFFFF22;
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: var(--color-texto);
+    font-size: 1rem;
+}
+
+.chat-entrada-asesor input:focus {
+    outline: none;
+    border-color: var(--color-botones-links);
+}
+
+.chat-entrada-asesor button {
+    background-color: var(--color-botones-links);
+    color: var(--color-texto);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+}
+
+.chat-entrada-asesor button:hover {
+    background-color: var(--color-hover);
+}
