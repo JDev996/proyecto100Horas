@@ -72,20 +72,26 @@
                 </div>
             </div>
 
-            <form class="contacto-form" novalidate>
+            <form id="contacto-form" class="contacto-form">
+                <input type="hidden" name="_subject" value="Nueva consulta para JAJ Motos" />
                 <div>
                     <div class="form-label">Envíanos un mensaje</div>
-                    <input class="campo" type="text" name="nombre" placeholder="Tu nombre" />
+                    <input class="campo" type="text" name="nombre" placeholder="Tu nombre" required />
+                    <span class="contacto-form__campo-error"></span>
                 </div>
 
                 <div>
-                    <input class="campo" type="email" name="email" placeholder="Tu correo electrónico" />
+                    <input class="campo" type="email" name="email" placeholder="Tu correo electrónico" required />
+                    <span class="contacto-form__campo-error"></span>
                 </div>
 
                 <div>
-                    <textarea class="campo campo-area" name="mensaje" placeholder="Escríbenos tu consulta..."></textarea>
+                    <textarea class="campo campo-area" name="mensaje" placeholder="Escríbenos tu consulta..." required></textarea>
+                    <span class="contacto-form__campo-error"></span>
                 </div>
 
+                <div class="contacto-form__estado contacto-form__estado--success" aria-live="polite"></div>
+                <div class="contacto-form__estado contacto-form__estado--error" aria-live="polite"></div>
                 <button class="btn-enviar" type="submit">Enviar mensaje →</button>
             </form>
         </section>
@@ -94,6 +100,10 @@
     <div id="footer"></div>
 
     <script src="js/componentes.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init('Gsi5uxLAWfcmVnwnr');
+    </script>
     <script src="js/contacto.js"></script>
 </body>
 </html>

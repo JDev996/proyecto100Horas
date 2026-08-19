@@ -249,6 +249,18 @@ body {
     line-height: 1.4;
 }
 
+.contacto-form__campo-error:not(:empty),
+.contacto-form__estado:not(:empty) {
+    display: block;
+}
+
+.contacto-form__campo-error {
+    display: block;
+    margin-top: 6px;
+    color: #ffb3b3;
+    font-size: 0.86rem;
+}
+
 .contacto-form__estado.success {
     display: block;
     background: rgba(46, 204, 113, 0.1);
@@ -258,6 +270,18 @@ body {
 
 .contacto-form__estado.error {
     display: block;
+    background: rgba(255, 87, 87, 0.08);
+    border: 1px solid rgba(255, 87, 87, 0.45);
+    color: #ffb3b3;
+}
+
+.contacto-form__estado--success:not(:empty) {
+    background: rgba(46, 204, 113, 0.1);
+    border: 1px solid rgba(46, 204, 113, 0.4);
+    color: #c8f9d5;
+}
+
+.contacto-form__estado--error:not(:empty) {
     background: rgba(255, 87, 87, 0.08);
     border: 1px solid rgba(255, 87, 87, 0.45);
     color: #ffb3b3;
