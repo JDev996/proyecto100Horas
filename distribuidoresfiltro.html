@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catalogo filtrado | JAJ Motos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/productos.css" />
+    <link rel="stylesheet" href="css/distribuidoresfiltro.css" />
+</head>
+<body>
+    <div id="header"></div>
+    <main class="filtro-catalogo">
+        <header class="filtro-catalogo__encabezado">
+            <h1>Catalogo por marca</h1>
+            <p>Consulta motos, repuestos y accesorios de nuestros distribuidores.</p>
+        </header>
+        <form class="filtro-controles" id="filtro-catalogo-form">
+            <label for="filtro-marca">Marca<select id="filtro-marca" name="marca"><option value="todos">Todas las marcas</option></select></label>
+            <label for="filtro-categoria">Categoria<select id="filtro-categoria" name="categoria"><option value="todos">Todos los productos</option><option value="motos">Motos</option><option value="repuestos">Repuestos</option><option value="accesorios">Accesorios</option></select></label>
+            <button type="submit">Aplicar filtro</button>
+        </form>
+        <p class="filtro-estado" id="filtro-estado">Cargando catalogo...</p>
+        <div id="filtro-resultados"></div>
+    </main>
+    <div id="footer"></div>
+    <script src="js/componentes.js"></script>
+    <script src="js/distribuidores.js"></script>
+</body>
+</html>

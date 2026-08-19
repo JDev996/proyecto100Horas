@@ -1,0 +1,211 @@
+.filtro-catalogo {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 52px 40px 70px;
+}
+
+.filtro-catalogo h1 {
+    margin-bottom: 8px;
+    color: var(--color-texto);
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    text-transform: uppercase;
+}
+
+.filtro-catalogo__encabezado {
+    margin-bottom: 30px;
+}
+
+.filtro-catalogo__encabezado p,
+.filtro-estado {
+    color: var(--color-texto-secundario);
+}
+
+.filtro-controles {
+    display: grid;
+    grid-template-columns: minmax(180px, 1fr) minmax(180px, 1fr) auto;
+    gap: 12px;
+    align-items: end;
+    margin-bottom: 34px;
+    padding: 18px;
+    border: 1px solid #FFFFFF14;
+    background: var(--color-tarjetas);
+}
+
+.filtro-controles label {
+    display: grid;
+    gap: 6px;
+    color: var(--color-texto-secundario);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+}
+
+.filtro-controles select,
+.filtro-controles button {
+    min-height: 44px;
+    padding: 0 14px;
+    border: 1px solid #FFFFFF20;
+    border-radius: 5px;
+    font: inherit;
+}
+
+.filtro-controles select {
+    background: #252525;
+    color: var(--color-texto);
+}
+
+.filtro-controles button {
+    border-color: var(--color-botones-links);
+    background: var(--color-botones-links);
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.filtro-controles button:hover {
+    background: var(--color-hover);
+}
+
+.filtro-categoria--oculta {
+    display: none;
+}
+
+@media (max-width: 680px) {
+    .filtro-catalogo {
+        padding: 34px 16px 50px;
+    }
+
+    .filtro-controles {
+        grid-template-columns: 1fr;
+    }
+}
+
+.brand-card__filter-button {
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+    display: inline-block;
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 6px;
+    background: var(--color-botones-links);
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.72rem;
+    transition: background 0.2s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.brand-card__filter-button:hover {
+    background: var(--color-hover);
+    transform: translateY(-1px);
+}
+
+.filtro-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.76);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.filtro-modal--visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.filtro-modal__contenido {
+    position: relative;
+    width: min(100%, 460px);
+    padding: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 10px;
+    background: #171717;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
+    transform: translateY(12px);
+    transition: transform 0.2s ease;
+}
+
+.filtro-modal--visible .filtro-modal__contenido {
+    transform: translateY(0);
+}
+
+.filtro-modal__cerrar {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+.filtro-modal__eyebrow {
+    color: var(--color-dorado);
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.filtro-modal h2 {
+    margin: 8px 0;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.filtro-modal__descripcion {
+    margin-bottom: 22px;
+    color: #bdbdbd;
+    font-size: 0.92rem;
+}
+
+#filtro-form {
+    display: grid;
+    gap: 8px;
+}
+
+#filtro-form label {
+    margin-top: 8px;
+    color: #d8d8d8;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+#filtro-form input,
+#filtro-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 5px;
+    background: #242424;
+    color: #fff;
+    font: inherit;
+}
+
+.filtro-modal__aplicar {
+    margin-top: 18px;
+    padding: 13px;
+    border: 0;
+    border-radius: 5px;
+    background: var(--color-botones-links);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.filtro-modal__aplicar:hover {
+    background: var(--color-hover);
+}

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/distribuidores.css" /> 
+    <link rel="stylesheet" href="css/distribuidoresfiltro.css" />
 </head>
 <body class="brand-page">
     <div id="header"></div>
@@ -31,7 +32,7 @@
                     <span>MODELO: YAMAHA</span>
                     <span>RACING • CITY • TOURING</span>
                 </div>
-                <a href="Productos.html?marca=YAMAHA">Ver motos de Yamaha →</a>
+                <button type="button" class="brand-card__filter-button" data-marca="YAMAHA">Ver motos de Yamaha</button>
             </article>
 
             <article class="brand-card brand-royal">
@@ -43,7 +44,7 @@
                     <span>MODELO: ROYAL ENFIELD</span>
                     <span>RETRO • PERFORMANCE • TOURING</span>
                 </div>
-                <a href="Productos.html?marca=ROYAL%20ENFIELD">Ver motos de Royal Enfield →</a>
+                <button type="button" class="brand-card__filter-button" data-marca="ROYAL ENFIELD">Ver motos de Royal Enfield</button>
             </article>
 
             <article class="brand-card brand-tvs">
@@ -55,7 +56,7 @@
                     <span>MODELO: TVS</span>
                     <span>URBANA • DEPORTIVA • EFICIENTE</span>
                 </div>
-                <a href="Productos.html?marca=TVS">Ver motos de TVS →</a>
+                <button type="button" class="brand-card__filter-button" data-marca="TVS">Ver motos de TVS</button>
             </article>
 
             <article class="brand-card brand-suzuki">
@@ -67,7 +68,7 @@
                     <span>MODELO: SUZUKI</span>
                     <span>URBANA • ALTA TECNOLOGÍA</span>
                 </div>
-                <a href="Productos.html?marca=SUZUKI">Ver motos de Suzuki →</a>
+                <button type="button" class="brand-card__filter-button" data-marca="SUZUKI">Ver motos de Suzuki</button>
             </article>
 
             <article class="brand-card brand-akt">
@@ -79,7 +80,7 @@
                     <span>MODELO: AKT</span>
                     <span>ECONÓMICA • DURABLE • FIABLE</span>
                 </div>
-                <a href="Productos.html?marca=AKT">Ver motos de AKT →</a>
+                <button type="button" class="brand-card__filter-button" data-marca="AKT">Ver motos de AKT</button>
             </article>
 
             <article class="brand-card brand-bajaj">
@@ -91,7 +92,7 @@
                     <span>MODELO: BAJAJ</span>
                     <span>ECONÓMICA • ROBUSTA • VERSÁTIL</span>
                 </div>
-                <a href="Productos.html?marca=BAJAJ">Ver motos de Bajaj →</a>
+                <button type="button" class="brand-card__filter-button" data-marca="BAJAJ">Ver motos de Bajaj</button>
             </article>
 
             <article class="brand-card brand-honda">
@@ -103,7 +104,7 @@
                     <span>MODELO: HONDA</span>
                     <span>CONFORT • CONFIANZA • CLASE</span>
                 </div>
-                <a href="Productos.html?marca=HONDA">Ver motos de Honda →</a>
+                <button type="button" class="brand-card__filter-button" data-marca="HONDA">Ver motos de Honda</button>
             </article>
 
             <article class="brand-card brand-hero">
@@ -115,12 +116,43 @@
                     <span>MODELO: HERO</span>
                     <span>URBANA • EFICIENTE • ACCESIBLE</span>
                 </div>
-                <a href="Productos.html?marca=HERO">Ver motos de Hero →</a>
+                <button type="button" class="brand-card__filter-button" data-marca="HERO">Ver motos de Hero</button>
             </article>
         </section>
     </main>
 
+    <div class="filtro-modal" id="filtro-modal" aria-hidden="true">
+        <div class="filtro-modal__contenido" role="dialog" aria-modal="true" aria-labelledby="filtro-titulo">
+            <button type="button" class="filtro-modal__cerrar" id="cerrar-filtro" aria-label="Cerrar filtro">X</button>
+            <span class="filtro-modal__eyebrow">Catalogo JAJ Motos</span>
+            <h2 id="filtro-titulo">Encuentra lo que buscas</h2>
+            <p class="filtro-modal__descripcion">Elige una categoria para consultar los productos disponibles de esta marca.</p>
+            <form id="filtro-form">
+                <label for="filtro-marca">Marca</label>
+                <select id="filtro-marca" name="marca">
+                    <option value="YAMAHA">Yamaha</option>
+                    <option value="ROYAL ENFIELD">Royal Enfield</option>
+                    <option value="TVS">TVS</option>
+                    <option value="SUZUKI">Suzuki</option>
+                    <option value="AKT">AKT</option>
+                    <option value="BAJAJ">Bajaj</option>
+                    <option value="HONDA">Honda</option>
+                    <option value="HERO">Hero</option>
+                </select>
+                <label for="filtro-categoria">Categoria</label>
+                <select id="filtro-categoria" name="categoria">
+                    <option value="motos">Motos</option>
+                    <option value="repuestos">Repuestos</option>
+                    <option value="accesorios">Accesorios</option>
+                    <option value="todos">Todos los productos</option>
+                </select>
+                <button type="submit" class="filtro-modal__aplicar">Aplicar filtro</button>
+            </form>
+        </div>
+    </div>
+
     <div id="footer"></div>
     <script src="js/componentes.js"></script>
+    <script src="js/distribuidores.js"></script>
 </body>
 </html>
