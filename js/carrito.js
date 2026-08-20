@@ -1,5 +1,7 @@
 const CARRITO_STORAGE_KEY = 'jajmotos_carrito';
 
+const LINK_PAGO_STRIPE = 'https://buy.stripe.com/test_6oU3cxdwxg6idhLbyS08g00';
+
 function obtenerCarrito() {
     const datos = localStorage.getItem(CARRITO_STORAGE_KEY);
     return datos ? JSON.parse(datos) : [];
@@ -210,3 +212,26 @@ document.addEventListener('DOMContentLoaded', () => {
     inicializarPanelCarrito();
     esperarEnlaceCarrito(actualizarBadgeCarrito);
 });
+
+
+function irAPagar() {
+    const carrito = obtenerCarrito();
+    if (carrito.length === 0) return;
+ 
+    const boton = document.getElementById('carrito-pagar');
+    boton.disabled = true;
+    boton.textContent = 'Redirigiendo...';
+ 
+    setTimeout(() => {
+        window.location.href = LINK_PAGO_STRIPE;
+    }, 500);
+}
+ 
+document.addEventListener('click', (e) => {
+    const link = e.target.closest('.carrito');
+    if (link) {
+        e.preventDefault();
+        abrirCarrito();
+    }
+});
+ 
