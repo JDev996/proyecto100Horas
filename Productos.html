@@ -40,7 +40,19 @@
     <main>
 
         <section id="motos" class="categoria">
-            <h2 class="categoria__titulo">Motos</h2>
+            <h2 class="categoria__titulo">Motos</h2> 
+             <div class="filtro-precio">
+                <label>
+                    Precio mínimo
+                    <input type="number" class="filtro-precio__min" placeholder="$ 0" min="0">
+                </label>
+                <label>
+                    Precio máximo
+                    <input type="number" class="filtro-precio__max" placeholder="Sin límite" min="0">
+                </label>
+                <button type="button" class="filtro-precio__boton" onclick="aplicarFiltro(this)">Filtrar</button>
+                <button type="button" class="filtro-precio__limpiar" onclick="limpiarFiltro(this)">Limpiar</button>
+            </div>
             <div class="productos-grid">
 
                 <article class="producto-card" data-id="moto-suzuki-gsxr-1000r" data-nombre="GSXR 1000R" data-marca="SUZUKI" data-precio="85000000" data-imagen="img/productos/MOTOS/Suzuki1.png">
@@ -162,11 +174,24 @@
                 </article>
 
             </div>
+             <button type="button" class="mostrar-mas" onclick="mostrarMas(this)">Mostrar más</button>
         </section>
 
-        <section id="repuestos" class="categoria">
-    <h2 class="categoria__titulo">Repuestos</h2>
-    <div class="productos-grid">
+         <section id="repuestos" class="categoria">
+            <h2 class="categoria__titulo">Repuestos</h2>
+            <div class="filtro-precio">
+                <label>
+                    Precio mínimo
+                    <input type="number" class="filtro-precio__min" placeholder="$ 0" min="0">
+                </label>
+                <label>
+                    Precio máximo
+                    <input type="number" class="filtro-precio__max" placeholder="Sin límite" min="0">
+                </label>
+                <button type="button" class="filtro-precio__boton" onclick="aplicarFiltro(this)">Filtrar</button>
+                <button type="button" class="filtro-precio__limpiar" onclick="limpiarFiltro(this)">Limpiar</button>
+            </div>
+            <div class="productos-grid">
         <article class="producto-card" data-id="repuesto-honda-farola-cbr" data-nombre="FAROLA CBR" data-marca="HONDA" data-precio="2300000" data-imagen="img/productos/REPUESTOS/CBR33.jpg">
             <div class="producto-card__galeria-wrap">
                 <div class="producto-card__galeria">
@@ -248,11 +273,24 @@
             </div>
         </article>
     </div>
+    <button type="button" class="mostrar-mas" onclick="mostrarMas(this)">Mostrar más</button>
 </section>
 
         <section id="accesorios" class="categoria">
-    <h2 class="categoria__titulo">Accesorios</h2>
-    <div class="productos-grid">
+            <h2 class="categoria__titulo">Accesorios</h2>
+            <div class="filtro-precio">
+                <label>
+                    Precio mínimo
+                    <input type="number" class="filtro-precio__min" placeholder="$ 0" min="0">
+                </label>
+                <label>
+                    Precio máximo
+                    <input type="number" class="filtro-precio__max" placeholder="Sin límite" min="0">
+                </label>
+                <button type="button" class="filtro-precio__boton" onclick="aplicarFiltro(this)">Filtrar</button>
+                <button type="button" class="filtro-precio__limpiar" onclick="limpiarFiltro(this)">Limpiar</button>
+            </div>
+            <div class="productos-grid">
 
         <article class="producto-card" data-id="accesorio-akrapovic-titan-carbon-racing" data-nombre="TITAN CARBON RACING" data-marca="AKRAPOVIC" data-precio="4000000" data-imagen="img/productos/ACCESORIOS/AKRA11.png">
             <div class="producto-card__galeria-wrap">
@@ -337,8 +375,10 @@
                 <button class="producto-card__boton" onclick="agregarAlCarrito(this)">Agregar al carrito</button>
             </div>
         </article>
-
     </div>
+     </div>
+            <button type="button" class="mostrar-mas" onclick="mostrarMas(this)">Mostrar más</button>
+        </section>
 </section>
 
     </main>
