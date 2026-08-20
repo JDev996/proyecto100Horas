@@ -338,6 +338,10 @@ h1, h2, h3, h4, h5, h6, p, a, span, div {
   color: #ff4d5d;
 }
 
+.avatar-foto {
+  object-fit: cover;
+}
+
 .avatar-nombre {
   font-weight: 700;
   font-size: 1.1rem;
