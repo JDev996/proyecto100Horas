@@ -153,6 +153,32 @@
     border-top: 1px solid #FFFFFF14;
 }
 
+.carrito-panel__pagar {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-botones-links);
+    color: var(--color-texto);
+    border: none;
+    border-radius: 4px;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-bottom: 8px;
+}
+ 
+.carrito-panel__pagar:hover {
+    background-color: var(--color-hover);
+}
+ 
+#carrito-pagar:disabled {
+    background-color: var(--color-tarjetas);
+    color: var(--color-texto-secundario);
+    cursor: not-allowed;
+}
+
 .carrito-panel__total {
     display: flex;
     justify-content: space-between;
