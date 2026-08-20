@@ -128,7 +128,7 @@
     position: fixed;
     bottom: 24px;
     right: 24px;
-    z-index: 1000;
+    z-index: 50;
     background-color: var(--color-botones-links);
     color: var(--color-texto);
     border: none;

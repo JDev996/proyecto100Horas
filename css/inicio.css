@@ -233,3 +233,41 @@
     transform: scale(1.02);
     box-shadow: 0 12px 26px rgba(0, 0, 0, 0.18);
 }
+
+.nosotros {
+    text-align: center;
+    background-image: linear-gradient(rgba(13, 13, 13, 0.8), rgba(13, 13, 13, 0.8)), url('../img/carrusel/moto5.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.nosotros h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.nosotros p {
+    max-width: 640px;
+    margin: 0 auto 32px;
+    color: var(--color-texto-secundario);
+    line-height: 1.7;
+}
+
+.nosotros a {
+    display: inline-block;
+    background-color: var(--color-botones-links);
+    color: var(--color-texto);
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 14px 32px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.nosotros a:hover {
+    background-color: var(--color-hover);
+}
