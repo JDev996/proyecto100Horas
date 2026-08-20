@@ -1,6 +1,6 @@
-const CARRITO_STORAGE_KEY = 'jajmotos_carrito';
+const CARRITO_STORAGE_KEY = 'jajmotos_carrito';                                                      // carrito de compras y pasarela
 
-const LINK_PAGO_STRIPE = 'https://buy.stripe.com/test_6oU3cxdwxg6idhLbyS08g00';
+const LINK_PAGO_STRIPE = 'https://buy.stripe.com/test_6oU3cxdwxg6idhLbyS08g00';                      //Link_de_Pago
 
 function obtenerCarrito() {
     const datos = localStorage.getItem(CARRITO_STORAGE_KEY);
@@ -15,19 +15,19 @@ function formatearPrecio(numero) {
     return '$ ' + numero.toLocaleString('es-CO');
 }
 
-function inicializarPanelCarrito() {
+function inicializarPanelCarrito() {                                                                   // despliega el carrito como un panel a mano derecha con toos sus componentes
     if (document.querySelector('.carrito-panel')) return;
 
     const overlay = document.createElement('div');
     overlay.className = 'carrito-overlay';
     overlay.addEventListener('click', cerrarCarrito);
 
-    const panel = document.createElement('aside');
+    const panel = document.createElement('aside');                                                     // cerrar carrito e ir a pagar
     panel.className = 'carrito-panel';
     panel.innerHTML = `
         <div class="carrito-panel__header">
             <h2 class="carrito-panel__titulo">Tu carrito</h2>
-            <button type="button" class="carrito-panel__cerrar" onclick="cerrarCarrito()" aria-label="Cerrar carrito">&times;</button>
+            <button type="button" class="carrito-panel__cerrar" onclick="cerrarCarrito()" aria-label="Cerrar carrito">&times;</button> 
         </div>
         <div class="carrito-panel__lista" id="carrito-lista"></div>
         <div class="carrito-panel__footer">
@@ -35,7 +35,8 @@ function inicializarPanelCarrito() {
                 <span>Total</span>
                 <span id="carrito-total">$ 0</span>
             </div>
-            <p class="carrito-panel__nota">Próximamente podrás finalizar tu compra desde aquí.</p>
+            <button type="button" id="carrito-pagar" class="producto-card__boton" onclick="irAPagar()">Finalizar compra</button>
+            <p class="carrito-panel__nota">Pago de demostración (Stripe, modo de prueba)</p>
         </div>
     `;
 
@@ -59,7 +60,6 @@ function cerrarCarrito() {
     document.querySelector('.carrito-panel').classList.remove('carrito-panel--activo');
 }
 
-// boton = el <button> "Agregar al carrito" que se hizo clic
 function agregarAlCarrito(boton) {
     const tarjeta = boton.closest('.producto-card');
     if (!tarjeta) return;
@@ -153,7 +153,7 @@ function renderizarCarrito() {
     totalEl.textContent = formatearPrecio(total);
 }
 
-function actualizarBadgeCarrito() {
+function actualizarBadgeCarrito() {                // actualiza el contador de productos en el carrito
     const link = document.querySelector('.carrito');
     if (!link) return;
 
@@ -193,6 +193,27 @@ document.addEventListener('click', (e) => {
     }
 });
 
+function irAPagar() {                       // funcion del boton "ir a pagar"
+    const carrito = obtenerCarrito();
+    if (carrito.length === 0) return;
+ 
+    const boton = document.getElementById('carrito-pagar');
+    boton.disabled = true;
+    boton.textContent = 'Redirigiendo...';
+ 
+    setTimeout(() => {
+        window.location.href = LINK_PAGO_STRIPE;
+    }, 500);
+}
+ 
+document.addEventListener('click', (e) => {
+    const link = e.target.closest('.carrito');
+    if (link) {
+        e.preventDefault();
+        abrirCarrito();
+    }
+});
+
 function esperarEnlaceCarrito(callback) {
     const existente = document.querySelector('.carrito');
     if (existente) {
@@ -214,24 +235,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-function irAPagar() {
-    const carrito = obtenerCarrito();
-    if (carrito.length === 0) return;
- 
-    const boton = document.getElementById('carrito-pagar');
-    boton.disabled = true;
-    boton.textContent = 'Redirigiendo...';
- 
-    setTimeout(() => {
-        window.location.href = LINK_PAGO_STRIPE;
-    }, 500);
-}
- 
-document.addEventListener('click', (e) => {
-    const link = e.target.closest('.carrito');
-    if (link) {
-        e.preventDefault();
-        abrirCarrito();
-    }
-});
+
  
