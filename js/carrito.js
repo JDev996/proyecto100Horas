@@ -35,7 +35,7 @@ function inicializarPanelCarrito() {                                            
                 <span>Total</span>
                 <span id="carrito-total">$ 0</span>
             </div>
-            <button type="button" id="carrito-pagar" class="producto-card__boton" onclick="irAPagar()">Finalizar compra</button>
+            <button type="button" id="carrito-pagar" class="carrito-panel__pagar" onclick="irAPagar()">Finalizar compra</button>
             <p class="carrito-panel__nota">Pago de demostración (Stripe, modo de prueba)</p>
         </div>
     `;
